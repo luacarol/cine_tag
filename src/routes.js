@@ -10,7 +10,7 @@ function AppRoutes() {
             <Cabecalho />
             <Routes>
                 <Route path="/" element={<Inicio />}></Route>
-                <Route path="/Favoritos" element={<Favoritos />}></Route>
+                <Route path="/favoritos" element={<Favoritos />}></Route>
             </Routes>
             <Rodape />
         </BrowserRouter>
