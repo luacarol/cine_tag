@@ -7,7 +7,10 @@ export default function FavoritosProvider({ children }) {
     const [favorito, setFavorito] = useState([]);
 
     return (
-        <FavoritosContext.Provider value={{favorito, setFavorito}}>{children}</FavoritosContext.Provider>
+        <FavoritosContext.Provider
+            value={{ favorito, setFavorito }}>
+            {children}
+        </FavoritosContext.Provider>
     )
 }
 
@@ -20,14 +23,13 @@ export function useFavoritoContext() {
         let novaLista = [...favorito];
 
         if (!favoritoRepetido) {
-            novaLista.push(novoFavorito)
+            novaLista.push(novoFavorito);
             return setFavorito(novaLista);
         }
 
         novaLista.splice(novaLista.indexOf(novoFavorito), 1);
         return setFavorito(novaLista);
-    }    
-
+    }
     return {
         favorito,
         adicionarFavorito
