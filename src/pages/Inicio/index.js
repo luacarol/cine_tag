@@ -19,7 +19,7 @@ function Inicio() {
         <>
             <Banner imagem="home" />
             <Titulo>
-                <h1>Um ligar para guardar seus vídeos e filmes!</h1>
+                <h1>Um lugar para guardar seus vídeos e filmes!</h1>
             </Titulo>
             <section className={styles.container}>
                 {videos.map((video) => {
